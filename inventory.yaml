@@ -1,0 +1,7 @@
+google:
+  hosts:
+    vpn: 
+      ansible_host: 34.133.235.13
+  vars:
+    ansible_user: jastabile
+localhost:

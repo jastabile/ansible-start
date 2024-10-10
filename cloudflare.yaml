@@ -1,0 +1,13 @@
+- name: CloudFlare DNS update
+  connection: local
+  hosts: localhost
+  tasks:
+    - name: Create a test.098353973.xyz A record to point to 127.0.0.1
+      community.general.cloudflare_dns:
+        zone: 098353973.xyz
+        record: test
+        type: A
+        value: 127.0.0.1
+        account_email: jastabile@gmail.com
+        api_token: "{{ api_token }}"
+      register: record
